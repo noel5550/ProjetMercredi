@@ -1,14 +1,13 @@
-
-<!DOCTYPE html>
 <html>
-<body>
 
-<h1>Super Projet de Mercredi 1</h1>
+    <body>
+        <h1>projet mercredi</h1>
+        <br><br>
 
-
-<a href="pageVid1.php">video 1</a>
-
-<a href="pageVid2.php">video 2</a>
-
-<a href="pageVid3.php">video 3</a>
-
+        <a href="video.php">video</a>
+        <br>
+        <a href="galerie.php">galerie image</a> <!-- dossier mignature -->
+        <br>
+        <a href="galerieMulti.php">galerie avec plein d'image de different moment de la video :)</a> <!-- dossier frames -->
+    </body>
+</html>

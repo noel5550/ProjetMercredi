@@ -1,0 +1,68 @@
+<?php
+
+// video chaque frame
+// ffmpeg -i "nom de video" -vf fps=1/60 "nom image"
+
+global $dir ;
+$dir= "C:/wamp64/www/ProjetMercredi"; // probleme de chemin
+$size = "120x90";
+
+global $video;
+$ffmpeg = "C:\\wamp64\\www\\ProjetMercredi\\ffmpeg\\bin";
+$getFromSecond = "00:00:05";
+//  si le dossier pointe existe
+echo exec('whoami');
+die();
+//$cmd = "ffmpeg -i C:/wamp64/www/ProjetMercredi/video2.mp4 -r 1 -f image2 image-%2d.png";
+//$cmd = "cls";
+if (exec($cmd )) echo "ok ";
+else echo 'pas ok ';
+
+die();
+if (is_dir($dir)) {
+
+    // si il contient quelque chose
+    if ($dh = opendir($dir)) {
+
+        // boucler tant que quelque chose est trouve
+        while (($file = readdir($dh)) !== false) {
+
+            if (!is_file($dir.$file)){
+
+                $info = new SplFileInfo($file); // verifier l'extention du fichier
+                  if ($info->getExtension() == "mp4")
+                  {
+                     // echo   $ext->getExtension()  ."</br>";
+                      $tmp = explode(".", $file);
+
+                      $image = $tmp[0].".png";
+                   //   $cmd = "ffmpeg -i $file -an -ss $getFromSecond -s $size $image";
+                    //  $cmd = "ffmpeg -i '. $file .' -ss 00:00:05 -vframes 1 $image";
+                      $cmd = "$ffmpeg -i $file";
+
+                      if (shell_exec($cmd)) echo "ok ";
+                      else echo "pas ok ";
+
+                  }
+            }
+        }
+        closedir($dh);
+    }
+}
+
+
+
+
+//$videoFile = $_F
+?>
+
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <h1>une image par video</h1>
+    </body>
+
+</html>
