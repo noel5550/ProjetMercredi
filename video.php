@@ -15,6 +15,7 @@
     </head>
     <body>
     <h1>Super Projet de Mercredi 1</h1>
+
     <p>liste des videos</p>
 
 <?php
@@ -24,6 +25,7 @@ $dir = "C:/wamp64/www/ProjetMercredi/video/"; // changé le chemin
 if ($dh = opendir($dir))
 {
     while (($file = readdir($dh)) !== false) {
+
         if (strlen($file)>2)
         {
             echo "  <video width= 320 height= 240  controls>";

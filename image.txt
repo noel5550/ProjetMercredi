@@ -1,4 +1,7 @@
+
 <?php
+/*
+
 
 // video chaque frame
 // ffmpeg -i "nom de video" -vf fps=1/60 "nom image"
@@ -10,6 +13,8 @@ $size = "120x90";
 global $video;
 $ffmpeg = "C:\\wamp64\\www\\ProjetMercredi\\ffmpeg\\bin";
 $getFromSecond = "00:00:05";
+
+
 //  si le dossier pointe existe
 echo exec('whoami');
 die();
@@ -18,7 +23,7 @@ die();
 if (exec($cmd )) echo "ok ";
 else echo 'pas ok ';
 
-die();
+
 if (is_dir($dir)) {
 
     // si il contient quelque chose
@@ -51,18 +56,6 @@ if (is_dir($dir)) {
 }
 
 
-
-
-//$videoFile = $_F
+*/
 ?>
 
-<html>
-    <head>
-
-    </head>
-
-    <body>
-        <h1>une image par video</h1>
-    </body>
-
-</html>
