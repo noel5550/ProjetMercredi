@@ -16,6 +16,10 @@
     <body>
     <h1>Super Projet de Mercredi 1</h1>
 
+    <br>
+    <a href="index.php">index</a>
+    <br>
+
     <p>liste des videos</p>
 
 <?php

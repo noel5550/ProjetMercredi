@@ -9,5 +9,32 @@
         <a href="galerie.php">galerie image</a> <!-- dossier mignature -->
         <br>
         <a href="galerieMulti.php">galerie avec plein d'image de different moment de la video :)</a> <!-- dossier frames -->
+
+
+
+        <h1>Mignatures des videos</h1>
+
+        <?php
+
+        $dir = "C:/wamp64/www/ProjetMercredi/mignature/"; // changé le chemin
+        // Ouvre un dossier bien connu, et liste tous les fichiers
+        if ($dh = opendir($dir))
+        {
+            echo '<table>';
+            while (($file = readdir($dh)) !== false) {
+
+                echo '<tr>';
+                if (strlen($file)>2)
+                {
+                    $video= explode('.',$file);
+                    echo "<td><a href='$video[0].php'><img src='mignature/$file' height='250' width='400'></a></td>";
+                }
+                echo '</tr>';
+            }
+            echo "</table>";
+            closedir($dh);
+        }
+
+        ?>
     </body>
 </html>

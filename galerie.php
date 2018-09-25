@@ -10,6 +10,10 @@
 <body>
 
 <h1>Mignatures des videos</h1>
+<br>
+<a href="index.php">index</a>
+<br>
+<br>
 
 <?php
 
@@ -20,7 +24,8 @@
         while (($file = readdir($dh)) !== false) {
             if (strlen($file)>2)
             {
-                echo "<img src='mignature/$file' height='250' width='400'>";
+                $video= explode('.',$file);
+                echo "<a href='video/$video[0].mp4'><img src='mignature/$file' height='250' width='400'></a>";
             }
         }
         closedir($dh);
