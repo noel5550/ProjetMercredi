@@ -44,4 +44,27 @@ if ($dh1 = opendir($dir1))
     echo "</table>";
     closedir($dh1);
 }
+
+
+$dir1 = "miniatures"; // changer le chemin
+// Ouvre un dossier bien connu, et liste tous les fichiers
+if ($dh1 = opendir($dir1))
+{
+    echo "<table>";
+    echo "<tr>";
+    while (($file1 = readdir($dh1)) !== false) {
+        
+        if (strlen($file1)>2)
+        {
+            if (strlen($file1) > 2 && $file1 != 'video3.jpg')
+            {
+                $video = explode('.',$file1);
+                echo "<td><a href = $video[0].php ><img src='miniatures/$file1' height='100' width='100'></a></td>";
+            }
+        }
+    }
+    echo "</tr>";
+    echo "</table>";
+    closedir($dh1);
+}
 ?>
