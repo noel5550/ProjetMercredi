@@ -1,33 +1,35 @@
 <html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="styleaccueil.css" />
+<title>Projet</title>
 
 <body>
 
-<!--         <h1>projet mercredi</h1> -->
-        <br><br>
+	<!--         <h1>projet mercredi</h1> -->
+	<br>
+	<br>
 
-<!--         <a href="video.php">video</a> -->
-<!--         <br> -->
-<!--         <a href="galerie.php">galerie image</a>  -->
-<!--         <br> -->
-<!--         <a href="galerieMulti.php">galerie avec plein d'image de different moment de la video :)</a>  -->
+	<!--         <a href="video.php">video</a> -->
+	<!--         <br> -->
+	<!--         <a href="galerie.php">galerie image</a>  -->
+	<!--         <br> -->
+	<!--         <a href="galerieMulti.php">galerie avec plein d'image de different moment de la video :)</a>  -->
 
 
 
-        <h1>Gallerie des videos</h1>
+	<h1>Gallerie des videos</h1>
 
         <?php
-
         $dir = "miniatures"; // changé le chemin
-        // Ouvre un dossier bien connu, et liste tous les fichiers
-        if ($dh = opendir($dir))
-        {
+                             // Ouvre un dossier bien connu, et liste tous les fichiers
+        if ($dh = opendir($dir)) {
             echo '<table>';
             while (($file = readdir($dh)) !== false) {
 
                 echo '<tr>';
-                if (strlen($file)>2)
-                {
-                    $video= explode('.',$file);
+                if (strlen($file) > 2) {
+                    $video = explode('.', $file);
                     echo "<td><a href='$video[0].php'><img src='miniatures/$file' height='250' width='400'></a></td>";
                 }
                 echo '</tr>';
@@ -38,4 +40,5 @@
 
         ?>
     </body>
+</head>
 </html>
