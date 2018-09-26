@@ -1,5 +1,5 @@
 <!--
-    commande pour extraire une mignature
+    commande pour extraire une miniature
     ffmpeg -i input_file.mp4 -ss 00:00:5 -vframes 1 output.jpg
 
     -i input file           the path to the input file

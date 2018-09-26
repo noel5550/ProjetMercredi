@@ -12,11 +12,11 @@
 
 
 
-        <h1>Mignatures des videos</h1>
+        <h1>Miniatures des videos</h1>
 
         <?php
 
-        $dir = "C:/wamp64/www/ProjetMercredi/mignature/"; // changé le chemin
+        $dir = "miniatures"; // changé le chemin
         // Ouvre un dossier bien connu, et liste tous les fichiers
         if ($dh = opendir($dir))
         {
@@ -27,7 +27,7 @@
                 if (strlen($file)>2)
                 {
                     $video= explode('.',$file);
-                    echo "<td><a href='$video[0].php'><img src='mignature/$file' height='250' width='400'></a></td>";
+                    echo "<td><a href='$video[0].php'><img src='miniatures/$file' height='250' width='400'></a></td>";
                 }
                 echo '</tr>';
             }

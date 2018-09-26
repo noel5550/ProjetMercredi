@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h1>Mignatures des videos</h1>
+<h1>Miniatures des videos</h1>
 <br>
 <a href="index.php">index</a>
 <br>
