@@ -14,8 +14,8 @@
   </div>
   <div class="w3-bar-block">
     <a href="index.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Accueil</a>
-    <h6><a href="video1.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Vidéo 1</a></h6>
-    <h6><a href="video3.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Vidéo 3</a> </h6>
+    <h6><a href="video1.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Automate</a></h6>
+    <h6><a href="video3.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Définition langage</a> </h6>
   </div>
 </nav>
 
@@ -31,7 +31,7 @@
 <br>
  <div class="w3-container" style="margin-top:80px" id="showcase">
     <h1 class="w3-jumbo"><b>Vidéo et Images</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>Vidéo 2</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Machine de Turing en Lego</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
 
