@@ -61,18 +61,19 @@ $dir1 = "frames/video2"; // changer le chemin
 if ($dh1 = opendir($dir1))
 {
 
-    echo "<table>";
+    echo "<table{overflow: scroll;}>";
     echo "<tr>";
 
+    echo "<table>";
+    echo "<tr>";
+    
     while (($file1 = readdir($dh1)) !== false) {
+        
+        
         if (strlen($file1)>2)
         {
-            echo "<table>";
-            echo "<tr>";
-
             if (strlen($file1) > 2)
-            {
-                //echo "frames/$file1/$file2<br>";
+            {   
                 echo "<td><img src='frames/video2/$file1' height='150' width='200'></></td>";
             }
         }
@@ -83,25 +84,4 @@ if ($dh1 = opendir($dir1))
 }
 
 
-/*$dir1 = "miniatures"; // changer le chemin
-// Ouvre un dossier bien connu, et liste tous les fichiers
-if ($dh1 = opendir($dir1))
-{
-    echo "<table>";
-    echo "<tr>";
-    while (($file1 = readdir($dh1)) !== false) {
-        
-        if (strlen($file1)>2)
-        {
-            if (strlen($file1) > 2 && $file1 != 'video2.jpg')
-            {
-                $video = explode('.',$file1);
-                echo "<td><a href = $video[0].php ><img src='miniatures/$file1' height='100' width='100'></a></td>";
-            }
-        }
-    }
-    echo "</tr>";
-    echo "</table>";
-    closedir($dh1);
-}*/
 ?>
