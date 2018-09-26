@@ -71,8 +71,8 @@ if ($dh1 = opendir($dir1))
             echo "<td>
                
                  <div class='w3-row-padding'>
-                    <div class='w3-half'>
-                        <img src='frames/video3/$file1' height='100' width='200' style='width:250%'><br>
+                    <div >
+                        <img src='frames/video3/$file1' height='100'  style='width:100%'><br>
                    </div>
                  </div>
                   </td>
