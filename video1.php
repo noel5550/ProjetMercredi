@@ -54,11 +54,11 @@
  <h3 class="w3-xxxlarge w3-text-red"><b>Images de la vidéo</b></h3>
 <?php
 
-$dir1 = "frames/video1"; // changer le chemin
+$dir1 = "frames/video1"; 
 // Ouvre un dossier bien connu, et liste tous les fichiers
 if ($dh1 = opendir($dir1))
 {
-    echo "<table>";
+    echo "<table{overflow: scroll;}>";
     echo "<tr>";
     while (($file1 = readdir($dh1)) !== false) {
 
@@ -66,7 +66,6 @@ if ($dh1 = opendir($dir1))
         {
                 if (strlen($file1) > 2)
                 {
-                    //echo "frames/$file1/$file2<br>";
                     echo "<td><img src='frames/video1/$file1' height='150' width='200'></td>";
                 }
         }
@@ -76,27 +75,6 @@ if ($dh1 = opendir($dir1))
     closedir($dh1);
 }
 
-/*$dir1 = "miniatures"; // changer le chemin
-// Ouvre un dossier bien connu, et liste tous les fichiers
-if ($dh1 = opendir($dir1))
-{
-    echo "<table>";
-    echo "<tr>";
-    while (($file1 = readdir($dh1)) !== false) {
-        
-        if (strlen($file1)>2)
-        {
-            if (strlen($file1) > 2 && $file1 != 'video1.jpg')
-            {
-                $video = explode('.',$file1);
-                echo "<td><a href = $video[0].php ><img src='miniatures/$file1' height='100' width='100'></a></td>";
-            }
-        }
-    }
-    echo "</tr>";
-    echo "</table>";
-    closedir($dh1);
-}*/
 
 ?>
 

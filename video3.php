@@ -15,7 +15,7 @@
   <div class="w3-bar-block">
     <a href="index.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Accueil</a>
     <h6><a href="video2.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Vidéo 1</a></h6>
-    <h6><a href="video3.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Vidéo 2</a> </h6>
+    <h6><a href="video1.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Vidéo 2</a> </h6>
   </div>
 </nav>
 
@@ -62,22 +62,13 @@ $dir1 = "frames/video3"; // changer le chemin
 // Ouvre un dossier bien connu, et liste tous les fichiers
 if ($dh1 = opendir($dir1))
 {
-    echo '<table>';
+    echo '<table {overflow: scroll;}>';
     echo "<tr>";
 
     while (($file1 = readdir($dh1)) !== false) {
        if (strlen($file1)>2)
         {
-            echo "<td>
-               
-                 <div class='w3-row-padding'>
-                    <div >
-                        <img src='frames/video3/$file1' height='100'  style='width:100%'><br>
-                   </div>
-                 </div>
-                  </td>
-                
-";
+            echo "<td><img src='frames/video3/$file1' height='100'  style='width:100%'></td>";
             
         }
 
@@ -88,25 +79,4 @@ if ($dh1 = opendir($dir1))
 }
 
 
-/*$dir1 = "miniatures"; // changer le chemin
-// Ouvre un dossier bien connu, et liste tous les fichiers
-if ($dh1 = opendir($dir1))
-{
-    echo "<table>";
-    echo "<tr>";
-    while (($file1 = readdir($dh1)) !== false) {
-        
-        if (strlen($file1)>2)
-        {
-            if (strlen($file1) > 2 && $file1 != 'video3.jpg')
-            {
-                $video = explode('.',$file1);
-                echo "<td><a href = $video[0].php ><img src='miniatures/$file1' height='100' width='100'></a></td>";
-            }
-        }
-    }
-    echo "</tr>";
-    echo "</table>";
-    closedir($dh1);
-}*/
 ?>
