@@ -17,7 +17,7 @@
 
 <?php
 
-    $dir = "C:/wamp64/www/ProjetMercredi/mignature/"; // changé le chemin
+    $dir = "miniatures"; // changé le chemin
     // Ouvre un dossier bien connu, et liste tous les fichiers
     if ($dh = opendir($dir))
     {

@@ -22,14 +22,14 @@
 <br><br>
 <?php
 
-$dir1 = "C:/wamp64/www/ProjetMercredi/frames/"; // changer le chemin
+$dir1 = "frames"; // changer le chemin
 // Ouvre un dossier bien connu, et liste tous les fichiers
 if ($dh1 = opendir($dir1))
 {
     while (($file1 = readdir($dh1)) !== false) {
         if (strlen($file1)>2)
         {
-            $dir2 = "C:/wamp64/www/ProjetMercredi/frames/".$file1; // changer le chemin
+            $dir2 = "frames".$file1; // changer le chemin
             if ($dh2 = opendir($dir2))
             {
             //    echo "<h1>$file1</h1>";

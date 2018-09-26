@@ -24,7 +24,7 @@
 
 <?php
 
-$dir = "C:/wamp64/www/ProjetMercredi/video/"; // changé le chemin
+$dir = "video"; // changé le chemin
 // Ouvre un dossier bien connu, et liste tous les fichiers
 if ($dh = opendir($dir))
 {

@@ -25,7 +25,7 @@
 <h3>image tiré de la video</h3>
 <?php
 
-$dir1 = "C:/wamp64/www/ProjetMercredi/frames/video1"; // changer le chemin
+$dir1 = "frames/video1"; // changer le chemin
 // Ouvre un dossier bien connu, et liste tous les fichiers
 if ($dh1 = opendir($dir1))
 {
